@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Survey
+
+<form action="/results" method="post" class="col-5">
+    <div class="form-group">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location">Dojo Location:</label>
+        <select asp-for="Location" class="form-control">
+            <option>Dallas</option>
+            <option>Arlington</option>
+            <option>Tulsa</option>
+            <option>Chicago</option>
+            <option>Oakland</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Location"></span>
+    </div>
+        <div class="form-group">
+        <label asp-for="Language">Language:</label>
+        <select asp-for="Language" class="form-control">
+            <option>PHP</option>
+            <option>C++</option>
+            <option>Javascript</option>
+            <option>Python</option>
+            <option>C#</option>
+        </select>
+        <span class="text-danger" asp-validation-for="Language"></span>
+    </div>
+    <div class="form-group">
+        <label for="Comment">Comment (optional):</label>
+        <textarea asp-for="Comment" class="form-control"></textarea>
+        <span class="text-danger" asp-validation-for="Comment"></span>
+    </div>
+    <button class="btn btn-outline-dark" value="Submit">Submit</button>
+    
+</form>
+
+
+
+
+
+
+@* <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dojo Survey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <fieldset>
+            <legend>Enter your Information!</legend>
+            <form method="post" action="/results">
+                <div>
+                    <label>Your Name:</label>
+                    <input type="text" name="Name" /> 
+                </div>
+                <div>
+                    <label>Dojo Location:</label>
+                    <select name="Location">
+                        <option>Arlington</option>
+                        <option>Dallas</option>
+                        <option>Chicago</option>
+                        <option>Tulsa</option>
+                        <option>Oakland</option>
+                    </select>
+                <div>
+                    <label>Favorite Language:</label>
+                    <select name="FavLang">
+                        <option>C#</option>
+                        <option>PHP</option>
+                        <option>Python</option>
+                        <option>Javascript</option>
+                        <option>HTML</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Comment (optional):</label>
+                    <textarea name="Comment"></textarea>
+                </div>
+                <input type="submit" value="Submit" />
+            </form>
+        </fieldset>
+    </body>
+</html> *@
